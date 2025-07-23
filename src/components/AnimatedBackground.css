@@ -1,0 +1,74 @@
+@keyframes fluidMotion {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  20% {
+    transform: translate(100px, 100px) rotate(60deg);
+  }
+  40% {
+    transform: translate(150px, 150px) rotate(-20deg);
+  }
+  60% {
+    transform: translate(00px, 200px) rotate(30deg);
+  }
+  80% {
+    transform: translate(200px, 00px) rotate(-80deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+@keyframes backgroundChange {
+  0%, 100% {
+    color: #a64dff; /* Electric violet */
+  }
+  20% {
+    color: #7f00ff; /* Deep purple */
+  }
+  40% {
+    color: #8a40f9; /* Indigo */
+  }
+  60% {
+    color: #5c33ff; /* Soft electric indigo */
+  }
+  80% {
+    color: #a64dff; /* Vivid neon purple */
+  }
+}
+
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+ }
+
+ 
+
+.liq-elem-1,
+.liq-elem-2,
+.liq-elem-3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(80px);
+  mix-blend-mode: screen;
+  animation: 
+    backgroundChange 60s infinite ease-in-out;
+  will-change: transform, color;
+   opacity: 0.6;
+ }
+
+/* .liq-elem-1 {
+  animation-delay: -6s, -3s;
+}
+.liq-elem-2 {
+  animation-delay: -6s, -10s;
+}
+.liq-elem-3 {
+  animation-delay: -2s, -4s;
+} */

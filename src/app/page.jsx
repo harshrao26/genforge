@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
+import Home from "@/pages/Home";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 const Page = () => {
   return (
     <div>
-      
-    </div>
-  )
-}
+      <Header />
 
-export default Page
+      <Home />
+      <Footer />
+    </div>
+  );
+};
+
+export default Page;
