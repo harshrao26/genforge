@@ -1,11 +1,6 @@
-// src/app/api/local-blogs/route.js
-import { getLocalBlogsCache, setLocalBlogsCache } from "@/lib/cache";
-
-const API_BASE = process.env.API_BASE_URL;
-
 export async function GET() {
   try {
-    // Try reading from local cache in dev ̰ ̰elopment
+    // Dev: Try cached
     if (process.env.NODE_ENV === "development") {
       const cached = getLocalBlogsCache();
       if (cached) {
@@ -13,19 +8,18 @@ export async function GET() {
       }
     }
 
-    // Fallback to API
+    // Always fetch in production
     const res = await fetch(`${API_BASE}/api/blogs`);
-    if (!res.ok) throw new Error("Failed to fetch blogs from API");
+    if (!res.ok) throw new Error("Failed to fetch blogs");
 
     const data = await res.json();
-    if (data.success && Array.isArray(data.blogs)) {
-      if (process.env.NODE_ENV === "development") {
-        setLocalBlogsCache(data.blogs);
-      }
-      return Response.json({ success: true, blogs: data.blogs });
+
+    // Save locally only in dev
+    if (process.env.NODE_ENV === "development") {
+      setLocalBlogsCache(data.blogs);
     }
 
-    return Response.json({ success: false, blogs: [] });
+    return Response.json({ success: true, blogs: data.blogs });
   } catch (err) {
     console.error("❌ /api/local-blogs error:", err);
     return Response.json({ success: false, blogs: [] });
