@@ -3,24 +3,66 @@
 import { useState } from "react";
 import { FaGlobe, FaBars, FaTimes } from "react-icons/fa";
 import { MdTranslate } from "react-icons/md";
+import { ArrowRight, Globe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/logo.png";
-import WrapButton from "@/components/ui/wrap-button.jsx";
+import ModelForm from "@/components/ModelForm.jsx";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import CalBookingModal from "@/components/CalBookingModal.jsx";
+
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+    const [openModal, setOpenModal] = useState(false);
+
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+    setMobileMenuOpen(false); // Close mobile menu if open
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const WrapButton = ({ className, children, onClick }) => {
+    return (
+      <div className="flex items-center justify-center">
+        <div
+          onClick={onClick}
+          className={`group cursor-pointer gap-2   flex items-center  rounded-full    ${className}`}
+        >
+          <div className="border border-[#3B3A3A] bg-[#833DFA] h-[43px] rounded-full flex items-center justify-center text-white px-2">
+            <Globe className="mx-2 animate-spin" />
+            <p className="font-medium tracking-tight mr-2">
+              {children ? children : "Contact Us"}
+            </p>
+            <div className="ease-in-out transition-all size-[26px] flex items-center justify-center rounded-full border-2 border-[#ffffff] mr-2">
+              <ArrowRight
+                size={18}
+                className="group-hover:rotate-45 ease-in-out transition-all"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <>
-      <nav className="w-full px-6 lg:px-12 py-4  bg-gradient-to-b from-black to-transparent fixed z-50 text-white flex items-center justify-between">
+      <nav className="w-full px-6 lg:px-12 py-4 bg-gradient-to-b from-black to-transparent fixed z-50 text-white flex items-center justify-between">
+        <CalBookingModal isOpen={openModal} onClose={() => setOpenModal(false)} />
+
         {/* Left: Logo */}
         <Link
           href="/"
-          className="text-xl text-gradient font-semibold flex items-center gap-3"
+          className="text-xl font-semibold flex items-center gap-3"
         >
-          <Image src={logo} alt="Logo" height={40} className="animate-in" />
-          GenForge Studio
+          <Image src={logo} alt="GenForge Studio Logo" height={40} className="animate-in" />
+          <h1>GenForge Studio</h1>
         </Link>
 
         {/* Desktop Nav (Hidden on mobile) */}
@@ -29,10 +71,13 @@ export default function Navbar() {
           <FaGlobe className="text-lg cursor-pointer" />
           <div className="h-5 w-px bg-white mx-2" />
 
-          <button className="px-4 py-2 border border-white rounded-full text-sm hover:bg-white hover:text-black transition">
-            Get started
+          <button
+  onClick={() => setOpenModal(true)}
+            className="px-4 py-2 border border-white rounded-full text-sm hover:bg-white hover:text-black transition"
+          >
+            Book An Appointment
           </button>
-          <WrapButton>Contact Us</WrapButton>
+          <WrapButton onClick={handleOpenModal}>Contact Us</WrapButton>
         </div>
 
         {/* Hamburger Menu (Mobile only) */}
@@ -42,7 +87,7 @@ export default function Navbar() {
             className="text-xl focus:outline-none"
             aria-label="Open menu"
           >
-            <FaBars />
+            <HiOutlineMenuAlt3 />
           </button>
         </div>
       </nav>
@@ -65,7 +110,7 @@ export default function Navbar() {
           >
             Home
           </Link>
-          <Link
+          {/* <Link
             href="/pricing"
             className="text-2xl"
             onClick={() => setMobileMenuOpen(false)}
@@ -85,13 +130,34 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(false)}
           >
             Support
-          </Link>
+          </Link> */}
 
           <div className="pt-6 flex flex-col gap-4 w-full max-w-xs">
-            <button className="w-full px-4 py-2 border border-white rounded-full text-sm hover:bg-white hover:text-black transition">
-              Get started
+            {/* <button className="w-full px-4 py-2 border border-white rounded-full text-sm hover:bg-white hover:text-black transition">
+              Book An Appointment
+            </button> */}
+            <WrapButton
+              onClick={handleOpenModal}
+              className="w-full justify-center"
+            >
+              Contact Us
+            </WrapButton>
+          </div>
+        </div>
+      )}
+
+      {/* Modal Popup with Animation */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center px-4 animate-fade-in-fast">
+          <div className="relative bg-black max-w-4xl w-full rounded-2xl overflow-auto shadow-lg border border-white/10">
+            <button
+              onClick={handleCloseModal}
+              className="absolute top-4 right-4 text-white text-2xl z-50"
+              aria-label="Close modal"
+            >
+              <FaTimes />
             </button>
-            <WrapButton className="w-full justify-center">Contact Us</WrapButton>
+            <ModelForm />
           </div>
         </div>
       )}
@@ -108,8 +174,24 @@ export default function Navbar() {
             transform: translateY(0);
           }
         }
+
         .animate-fade-in {
           animation: fadeIn 0.3s ease-in-out forwards;
+        }
+
+        @keyframes fadeInFast {
+          from {
+            opacity: 0;
+            transform: scale(0.95);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        .animate-fade-in-fast {
+          animation: fadeInFast 0.2s ease-out forwards;
         }
       `}</style>
     </>

@@ -81,8 +81,8 @@ export default function BlogsClientUI({ blog }) {
       </section>
 
       {/* Main Content Area */}
-      <div className="max-w-7xl mx-auto px-4 mt-10 flex flex-col lg:flex-row gap-8">
-        <div className="w-full lg:w-3/4">
+      <div className="max-w-7xl max-w-7xl   px-4 mt-10 flex flex-col lg:flex-row gap-8">
+        <div className="w-full  ">
          <EditorJsRenderer
   content={
     typeof blog.content === "string"
@@ -93,9 +93,7 @@ export default function BlogsClientUI({ blog }) {
         </div>
 
         {/* Sidebar */}
-        <aside className="w-full lg:w-1/4 space-y-10 sticky top-20">
-         <BlogSidebarContactForm />
-        </aside>
+       
       </div>
 
       {/* Connected Services */}

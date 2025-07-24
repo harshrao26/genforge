@@ -4,7 +4,7 @@ import SplineFooter from "./SplineFooter";
 const plans = [
   {
     name: "Basic Plan",
-    price: "₹4,999",
+    price: "₹7,999",
     billing: "One-time",
     monthlyHosting: "₹999/month",
     color: "purple",
@@ -72,7 +72,7 @@ const plans = [
 
 const PricingSection = () => {
   return (
-    <div className="min-h-screen overflow-x-clip relative bg-gradient-to-t mt-20 from-[#8a2be2] via-black to-black text-white py-20 px-4">
+    <div id="pricing" className="min-h-screen overflow-x-clip relative bg-gradient-to-t mt-20 from-[#833DFA] via-black to-black text-white py-20 px-4">
       {/* Header */}
        <div className="absolute -top-[800px] right-0 h-full w-80   rotate-60  bg-gradient-to-bl from-[#833DFA] to-transparent blur-3xl"></div>
  <div className="absolute -top-96 h-full w-80 left-0  -rotate-60  bg-gradient-to-bl from-[#833DFA] to-transparent blur-3xl"></div>
@@ -142,7 +142,8 @@ const PricingSection = () => {
 
       {/* Add-on Note */}
       <div className="mt-10 text-center z-20 relative text-gray-300 text-sm">
-        💬 <span className="text-white capitalize">we also provide guidance how you can grow your business in technical aspects</span> {" "}
+        <span className="text-white  ">We charge a small hosting fee to keep your website live, fast, secure, and stress-free. <br />So you can focus on your business, not tech headaches.
+</span> {" "}
          ✅
       </div>
 

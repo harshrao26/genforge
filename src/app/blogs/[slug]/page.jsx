@@ -5,7 +5,7 @@ import BlogsClientUI from '@/components/BlogsClientUI';
 
 // ✅ Fetch blog data from API
 async function getBlog(slug) {
-  const res = await fetch(`http://localhost:3000/api/blogs/${slug}`, {
+  const res = await fetch(`http://localhost:3001/api/blogs/${slug}`, {
    });
 
   if (!res.ok) return null;
@@ -14,7 +14,7 @@ async function getBlog(slug) {
 
 // ✅ Generate metadata for SEO
 export async function generateMetadata({ params }) {
-  const res = await fetch(`http://localhost:3000/api/blogs/${params.slug}`, {
+  const res = await fetch(`http://localhost:3001/api/blogs/${params.slug}`, {
    
   });
 
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }) {
 
 // ✅ Pre-generate all blog slugs at build time
 export async function generateStaticParams() {
-  const res = await fetch('http://localhost:3000/api/blogs', {
+  const res = await fetch('http://localhost:3001/api/blogs', {
     cache: 'no-store',
   });
 

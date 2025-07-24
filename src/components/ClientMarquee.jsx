@@ -14,7 +14,7 @@ import image from "@/assets/clients/image.png";
 import './clientMarquee.css'
  
 
-const logos = [ evz, fila, groovy, spark, trygve, af,  zivora,];
+const logos = [ evz, fila, groovy, spark, trygve, af,  zivora, unigold, ];
 
 export default function ClientMarquee() {
   return (

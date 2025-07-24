@@ -141,13 +141,19 @@ const Page = () => {
 
 const BlogHero = ({ searchTerm, setSearchTerm, onSearch }) => (
   <section className="relative flex justify-between w-full bg-gradient-to-br from-[#833DFA] via-[#] to-white text-zinc-800 overflow-hidden pt-16">
-    <span className="md:text-[20vw] text-[25vw] main-p absolute -right-10">⤶</span>
-    <span className="md:text-[20vw] text-[25vw] main-p absolute -left-10">ヅ</span>
+    <span className="md:text-[20vw] text-[25vw] main-p absolute -right-10">
+      ⤶
+    </span>
+    <span className="md:text-[20vw] text-[25vw] main-p absolute -left-10">
+      ヅ
+    </span>
     <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 flex  justify-between items-center gap-12 relative z-10">
       <div className="md:max-w-2xl ">
         <h1 className="text-3xl z-10 special-font relative  sm:text-4xl md:text-6xl font-bold text-center leading-tight mb-4">
           Strategies, Stories <br /> & Solutions for Modern{" "}
-          <span className="-rotate-20 text-white px-4 shadow-2xl main-p-bg ">Businesses</span>
+          <span className="-rotate-20 text-white px-4 shadow-2xl main-p-bg ">
+            Businesses
+          </span>
           <span className="md:text-9xl text-7xl animate-[spin_3s_linear_infinite] top-1/4 right-0 z-1 main-p  duration-100 absolute">
             ❋
           </span>

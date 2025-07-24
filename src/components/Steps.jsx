@@ -104,13 +104,13 @@ export default function HowItWorks() {
             </div>
             <h3 className="text-lg font-medium mb-4 leading-snug">{step.title}</h3>
 
-            <div className="bg-gray-800 rounded-lg overflow-hidden h-40 flex items-center justify-center">
+            {/* <div className="bg-gray-800 rounded-lg overflow-hidden h-40 flex items-center justify-center">
               <img
                 src={step.image}
                 alt={step.title}
                 className="w-full h-full object-cover"
               />
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

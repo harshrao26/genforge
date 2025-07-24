@@ -80,8 +80,7 @@ export default function BlogListPage() {
                 key={blog._id}
                 className="bg-white shadow-sm border border-gray-200 rounded-lg overflow-hidden"
               >
-                {console.log(blog.image)}
-                <img
+                 <img
                   src={blog.image || "/placeholder.png"}
                   alt={blog.title}
                   className="w-full h-48 object-cover"

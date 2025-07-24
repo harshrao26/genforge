@@ -8,9 +8,10 @@ import {
 } from 'react-icons/fa6';
 import logo from '@/assets/logo.png';
 import Image from 'next/image';
+import Link from 'next/link';
 const Footer = () => {
   return (
-    <div className="bg-gradient-to-bl from-[#823dfa] via-[#823dfa] to-[#823dfa00] text-white py-4 text-center pt-10">
+    <div className="bg-gradient-to-bl from-[#823dfa] via-[#823dfa] to-[#823dfa00] text-white py-4 text-center pt-10 px-4 md:px-0">
 
 
       <div className="flex flex-col md:flex-row max-w-7xl mx-auto justify-between gap-10">
@@ -19,53 +20,44 @@ const Footer = () => {
           <div className="flex items-center gap-2">
             {/* Replace this div with your logo if available */}
             <div className="bg-w hite text-white w-8 h-8 flex items-center justify-center rounded">
-<Image src={logo} />            </div>
+<Image src={logo} alt='GenForge Studio Logo'/>            </div>
             <span className="font-semibold text-lg text-white">GenForge Studio
 
 </span>
           </div>
-          <p className="text-white mt-4 max-w-sm">
+          <p className="text-white mt-4 max-w-sm text-left">
             GenForge Studio
 
  empowers teams to transform raw data into clear, compelling visuals — making insights easier to share, understand, and act on.
           </p>
-          <div className="flex items-center gap-4 text-gray-50 text-xl mt-6">
-            <FaXTwitter className="hover:text-white cursor-pointer" />
-            <FaInstagram className="hover:text-white cursor-pointer" />
-            <FaLinkedin className="hover:text-white cursor-pointer" />
-            <FaGithub className="hover:text-white cursor-pointer" />
-          </div>
+           <div className="flex items-center gap-4 text-gray-0 text-xl mt-6">
+                       <a href="https://www.instagram.com/genforgestudio/">
+                        <FaInstagram className="hover:text-white cursor-pointer" />
+                      </a>
+                      <a href="https://www.linkedin.com/company/genforge-studio">
+                      
+                      <FaLinkedin className="hover:text-white cursor-pointer" />
+                      </a>
+                     </div>
         </div>
 
         {/* Right section */}
         <div className="flex flex-col sm:flex-row gap-10">
-          <div>
-            <h4 className="text-white font-semibold mb-3">Product</h4>
-            <ul className="space-y-2 text-white">
-              <li className="hover:text-white cursor-pointer">Features</li>
-              <li className="hover:text-white cursor-pointer">Pricing</li>
-              <li className="hover:text-white cursor-pointer">Integrations</li>
-              <li className="hover:text-white cursor-pointer">Changelog</li>
-            </ul>
+          
+         <div className="flex max-w-7xl mx-auto flex-col sm:flex-col justify-between items-center   pt-6 text-sm text-gray-50">
+          <div className="flex fle-col gap-4 mt-4 sm:mt-0">
+            <Link href="/privacy-policy" className="hover:text-white">
+              Privacy Policy
+            </Link>
+            <Link href="/terms-and-conditions" className="hover:text-white">
+              Terms of Service
+            </Link>
+            <Link href="/cookies-settings" className="hover:text-white">
+              Cookies Settings
+            </Link>
           </div>
-          <div>
-            <h4 className="text-white font-semibold mb-3">Resources</h4>
-            <ul className="space-y-2 text-white">
-              <li className="hover:text-white cursor-pointer">Documentation</li>
-              <li className="hover:text-white cursor-pointer">Tutorials</li>
-              <li className="hover:text-white cursor-pointer">Blog</li>
-              <li className="hover:text-white cursor-pointer">Support</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-white font-semibold mb-3">Company</h4>
-            <ul className="space-y-2 text-white">
-              <li className="hover:text-white cursor-pointer">About</li>
-              <li className="hover:text-white cursor-pointer">Careers</li>
-              <li className="hover:text-white cursor-pointer">Contact</li>
-              <li className="hover:text-white cursor-pointer">Partners</li>
-            </ul>
-          </div>
+        </div>
+          
         </div>
       </div>
 
@@ -75,15 +67,11 @@ const Footer = () => {
 </div>
 
       {/* Bottom section */}
-      <div className="flex max-w-7xl mx-auto flex-col sm:flex-row justify-between items-center   pt-6 text-sm text-gray-50">
+      <div className="flex max-w-7xl mx-auto flex-col sm:flex-row justify-between items-center text-center  pt-6 text-sm text-gray-50">
         <p>© 2025 GenForge Studio
 
 . All rights reserved.</p>
-        <div className="flex gap-4 mt-4 sm:mt-0">
-          <a href="#" className="hover:text-white">Privacy Policy</a>
-          <a href="#" className="hover:text-white">Terms of Service</a>
-          <a href="#" className="hover:text-white">Cookies Settings</a>
-        </div>
+      
       </div>
 
 

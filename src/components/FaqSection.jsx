@@ -30,8 +30,8 @@ const FaqSection = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 relative">
      
-      <h2 className="text-5xl font-medium main-p mb-18 text-center">Frequently Asked Questions</h2>
-      <div className="space-y-4 mt-8">
+      <h2 className="md:text-5xl text-2xl font-medium main-p mb-18 text-center">Frequently Asked Questions</h2>
+      <div className="space-y-4 mt-">
         {faqs.map((faq, index) => (
           <div key={index} className="border-b border-gray-300 mt-10">
             <button

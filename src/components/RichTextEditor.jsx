@@ -60,7 +60,7 @@ export default function EditorJSRenderer({ value, onChange }) {
         .catch((e) => console.warn('Editor cleanup error:', e));
       editorRef.current = null;
     };
-  }, []); // EMPTY dependencies → ensures it only runs ONCE
+  }, []);  
 
   return (
     <div>

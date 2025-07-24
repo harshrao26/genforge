@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Hero from "@/components/Hero";
 import WhyChoose from "@/components/WhyChoose";
 import Steps from "@/components/Steps";
@@ -28,9 +28,16 @@ const Home = () => {
    
   ];
 
+    const pricingRef = useRef(null);
+
+  const scrollToPricing = () => {
+    pricingRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+
   return (
     <div className="bg-black ">
-      <Hero />
+      <Hero onViewPricingClick={scrollToPricing} />
       {/* <TextScroll
       className="font-display mt- 8 bg-[#833DFA] py-2 text-center text-4xl font-semibold tracking-tighter  text- dark:text-white md:text-7xl md:leading-[5rem]"
       text="BrandCraft Studios
@@ -60,8 +67,8 @@ const Home = () => {
       {/* <MarqueeDemo /> */}
       <ClientMarquee />
       <GetInTouch />
-      <PricingSection />
-      <Projects />
+      <PricingSection  ref={pricingRef} />
+      {/* <Projects /> */}
       <AboutSection />
       <ContactForm />
 
