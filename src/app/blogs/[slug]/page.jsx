@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import BlogsClientUI from "@/components/BlogsClientUI";
 
 // Use environment variable for API
-const API_BASE = process.env.API_BASE_URL || "http://localhost:3001";
+const API_BASE = process.env.API_BASE_URL;
 
 // ✅ Fetch individual blog
 async function getBlog(slug) {
