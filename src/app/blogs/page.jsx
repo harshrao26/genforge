@@ -33,7 +33,7 @@ const Page = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await fetch("/api/blogs");
+        const res = await fetch(`/api/local-blogs`);
         const data = await res.json();
         if (data.success) {
           const formatted = data.blogs.map((blog) => ({
@@ -45,21 +45,21 @@ const Page = () => {
               month: "short",
               year: "numeric",
             }),
-            readTime: "5 mins read", // static for now
+            readTime: "5 mins read",
             title: blog.title,
             summary: blog.metaDescription,
             authorName: blog.author || "Unknown",
             authorImage: "/authors/default.jpg",
             timestamp: new Date(blog.createdAt).getTime(),
-            views: blog.views || 0, // assuming 'views' exists
+            views: blog.views || 0,
             slug: blog.urlSlug,
           }));
           setBlogs(formatted);
         }
       } catch (err) {
-        console.error("Failed to fetch blogs", err);
+        console.error("❌ Failed to fetch blogs", err);
       } finally {
-        setLoading(false); // ✅ Mark as loaded
+        setLoading(false);
       }
     };
 
