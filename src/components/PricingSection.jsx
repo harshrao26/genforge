@@ -1,7 +1,6 @@
 import React from "react";
 import Addons from "./Addons";
-import SplineFooter from "./SplineFooter";
-const plans = [
+ const plans = [
   {
     name: "Basic Plan",
     price: "₹7,999",
@@ -147,8 +146,7 @@ const PricingSection = () => {
          ✅
       </div>
 
-      {/* <SplineFooter  className='-z-10'/> */}
-
+ 
       <Addons />
     </div>
   );

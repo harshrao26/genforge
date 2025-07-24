@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import SplineHero from "@/components/SplineHero";
-import heroimg from "@/assets/heroimg3.jpg";
+ import heroimg from "@/assets/heroimg3.jpg";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 const ModelForm = dynamic(() => import("@/components/ModelForm"), {
@@ -34,8 +33,7 @@ export default function Hero({onViewPricingClick}) {
 
       </div>
 
-      {/* <SplineHero /> */}
-      {/* Content Overlay */}
+       {/* Content Overlay */}
       <div className="relative z-10 flex flex-col items-center justify-center overflow-hidden h-screen px-4 text-center">
         <h1 className="text-5xl text-gradient max-w-6xl sm:text-6xl lg:text-7xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-300 to-white">
           Your Partner in Digital Growth <br /> Not Just a Website Builder

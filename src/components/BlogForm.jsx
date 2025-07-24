@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
  import slugify from "slugify";
 
- import RichTextEditor from './RichTextEditor'
+const RichTextEditor = dynamic(() => import('./RichTextEditor'), { ssr: false });
 export default function BlogForm({ initialData = {}, onSubmit }) {
   const [uploading, setUploading] = useState(false);
 

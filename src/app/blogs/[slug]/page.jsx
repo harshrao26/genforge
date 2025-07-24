@@ -1,56 +1,82 @@
-// app/blog/[slug]/page.jsx
+import { notFound } from "next/navigation";
+import BlogsClientUI from "@/components/BlogsClientUI";
 
-import { notFound } from 'next/navigation';
-import BlogsClientUI from '@/components/BlogsClientUI';
+// Use environment variable for API
+const API_BASE = process.env.API_BASE_URL || "http://localhost:3001";
 
-// ✅ Fetch blog data from API
+// ✅ Fetch individual blog
 async function getBlog(slug) {
-  const res = await fetch(`http://localhost:3001/api/blogs/${slug}`, {
-   });
+  try {
+    const res = await fetch(`${API_BASE}/api/blogs/${slug}`, {
+      cache: "no-store",
+    });
 
-  if (!res.ok) return null;
-  return await res.json();
+    if (!res.ok) throw new Error("Failed to fetch blog");
+
+    return await res.json();
+  } catch (err) {
+    console.error("❌ getBlog error:", err.message);
+    return null;
+  }
 }
 
-// ✅ Generate metadata for SEO
+// ✅ SEO Metadata Generation
 export async function generateMetadata({ params }) {
-  const res = await fetch(`http://localhost:3001/api/blogs/${params.slug}`, {
-   
-  });
+  try {
+    const res = await fetch(`${API_BASE}/api/blogs/${params.slug}`, {
+      cache: "no-store",
+    });
 
-  if (!res.ok) return {};
+    if (!res.ok) return {};
 
-  const blog = await res.json();
+    const blog = await res.json();
 
-  return {
-    title: blog.metaTitle || blog.title,
-    description: blog.metaDescription,
-    alternates: {
-      canonical: blog.canonicalUrl,
-    },
-    openGraph: {
-      title: blog.metaTitle,
-      description: blog.metaDescription,
-      url: blog.canonicalUrl,
-      images: [{ url: blog.image }],
-    },
-  };
+    return {
+      title: blog.metaTitle || blog.title,
+      description: blog.metaDescription || "",
+      alternates: {
+        canonical: blog.canonicalUrl || "",
+      },
+      openGraph: {
+        title: blog.metaTitle || blog.title,
+        description: blog.metaDescription || "",
+        url: blog.canonicalUrl || "",
+        images: blog.image ? [{ url: blog.image }] : [],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: blog.metaTitle || blog.title,
+        description: blog.metaDescription || "",
+        images: blog.image ? [blog.image] : [],
+      },
+    };
+  } catch (err) {
+    console.error("❌ generateMetadata error:", err.message);
+    return {};
+  }
 }
 
-// ✅ Pre-generate all blog slugs at build time
+// ✅ Static generation for all slugs (optional)
 export async function generateStaticParams() {
-  const res = await fetch('http://localhost:3001/api/blogs', {
-    cache: 'no-store',
-  });
+  try {
+    const res = await fetch(`${API_BASE}/api/blogs`, {
+      cache: "no-store",
+    });
 
-  const data = await res.json();
+    if (!res.ok) throw new Error("Failed to fetch blogs list");
 
-  return Array.isArray(data)
-    ? data.map((blog) => ({ slug: blog.urlSlug }))
-    : [];
+    const blogs = await res.json();
+
+    return Array.isArray(blogs)
+      ? blogs.map((blog) => ({ slug: blog.urlSlug }))
+      : [];
+  } catch (err) {
+    console.error("❌ generateStaticParams error:", err.message);
+    return [];
+  }
 }
 
-// ✅ Main component
+// ✅ Page Component
 export default async function BlogDetails({ params }) {
   const blog = await getBlog(params.slug);
 
