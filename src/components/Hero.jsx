@@ -1,16 +1,17 @@
 "use client";
 
 import { useState } from "react";
- import heroimg from "@/assets/heroimg4.png";
+import heroimg from "@/assets/heroimg4.png";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 const ModelForm = dynamic(() => import("@/components/ModelForm"), {
   ssr: false,
   loading: () => null,
-});import { FaTimes } from "react-icons/fa";
+});
+import { FaTimes } from "react-icons/fa";
 import AnimatedBackground from "./AnimatedBackground";
 
-export default function Hero({onViewPricingClick}) {
+export default function Hero({ onViewPricingClick }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => setIsModalOpen(true);
@@ -20,20 +21,19 @@ export default function Hero({onViewPricingClick}) {
     <div className="relative h-screen w-full overflow-hidden bg-black text-white">
       {/* Spline Background */}
       <div className="absolute inset-0 z-0">
-      <Image
-  src={heroimg}
-  alt="Hero Background"
-  fill
-  priority // ✅ critical!
-  quality={75} // ✅ Slightly compressed
-  sizes="100vw"
-  className="object-cover md:opacity-80 opacity-50"
-  style={{ filter: "saturate(1)" }}
-/>
-
+        <Image
+          src={heroimg}
+          alt="Hero Background"
+          fill
+          priority // ✅ critical!
+          quality={75} // ✅ Slightly compressed
+          sizes="100vw"
+          className="object-cover md:opacity-80 opacity-50"
+          style={{ filter: "saturate(1)" }}
+        />
       </div>
 
-       {/* Content Overlay */}
+      {/* Content Overlay */}
       <div className="relative z-10 flex flex-col items-center justify-center overflow-hidden h-screen px-4 text-center">
         <h1 className="text-5xl text-gradient max-w-6xl sm:text-6xl lg:text-7xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-300 to-white">
           Your Partner in Digital Growth <br /> Not Just a Website Builder
@@ -52,18 +52,19 @@ export default function Hero({onViewPricingClick}) {
           >
             Book Free Call
           </button>
-        {/* <button
+          {/* <button
           onClick={onViewPricingClick}
           className="bg-white text-gray-800 font-semibold px-6 py-3 rounded-full border border-gray-300 hover:bg-gray-100 transition"
         >
           View Pricing
         </button> */}
-        <a href="#pricing" className="bg-white text-gray-800 font-semibold px-6 py-3 rounded-full border border-gray-300 hover:bg-gray-100 transition">
-  View Pricing
-</a>
-
+          <a
+            href="#pricing"
+            className="bg-white text-gray-800 font-semibold px-6 py-3 rounded-full border border-gray-300 hover:bg-gray-100 transition"
+          >
+            View Pricing
+          </a>
         </div>
-    
       </div>
 
       {/* Modal Popup */}
@@ -100,8 +101,7 @@ export default function Hero({onViewPricingClick}) {
         }
       `}</style>
 
-                  {/* <AnimatedBackground /> */}
-
+      {/* <AnimatedBackground /> */}
     </div>
   );
 }
