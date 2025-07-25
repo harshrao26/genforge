@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import heroimg from "@/assets/heroimg4.png";
+import heroimg2 from "@/assets/heroimg3.jpg";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 const ModelForm = dynamic(() => import("@/components/ModelForm"), {
@@ -21,14 +22,24 @@ export default function Hero({ onViewPricingClick }) {
     <div className="relative h-screen w-full overflow-hidden bg-black text-white">
       {/* Spline Background */}
       <div className="absolute inset-0 z-0">
-        <Image
+        {/* <Image
           src={heroimg}
           alt="Hero Background"
           fill
           priority // ✅ critical!
-          quality={75} // ✅ Slightly compressed
+          quality={75} 
           sizes="100vw"
-          className="object-cover md:opacity-80 opacity-50"
+          className="object-cover md:opacity-80 opacity-50 md:block hidden"
+          style={{ filter: "saturate(1)" }}
+        /> */}
+        <Image
+          src={heroimg2}
+          alt="Hero Background"
+          fill
+          priority // ✅ critical!
+          quality={75} 
+          sizes="100vw"
+          className="object-cover md:opacity-50  "
           style={{ filter: "saturate(1)" }}
         />
       </div>
