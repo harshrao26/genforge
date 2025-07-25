@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
- import heroimg from "@/assets/heroimg3.jpg";
+ import heroimg from "@/assets/heroimg4.png";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 const ModelForm = dynamic(() => import("@/components/ModelForm"), {
@@ -27,7 +27,7 @@ export default function Hero({onViewPricingClick}) {
   priority // ✅ critical!
   quality={75} // ✅ Slightly compressed
   sizes="100vw"
-  className="object-cover opacity-60"
+  className="object-cover md:opacity-80 opacity-50"
   style={{ filter: "saturate(1)" }}
 />
 
