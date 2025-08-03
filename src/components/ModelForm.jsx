@@ -16,13 +16,13 @@ export default function ProjectInquiryForm() {
 
   const router = useRouter();
 
-
   const validate = () => {
     const newErrors = {};
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^[0-9+\-\s()]{7,15}$/;
 
-    if (!formData.fullName.trim()) newErrors.fullName = "Full name is required.";
+    if (!formData.fullName.trim())
+      newErrors.fullName = "Full name is required.";
     if (!formData.email.trim()) {
       newErrors.email = "Email is required.";
     } else if (!emailRegex.test(formData.email)) {
@@ -43,9 +43,9 @@ export default function ProjectInquiryForm() {
     setErrors((prev) => ({ ...prev, [e.target.name]: "" }));
   };
 
- const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-      if (loading) return; // prevent multiple clicks
+    if (loading) return; // prevent multiple clicks
 
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
@@ -54,7 +54,7 @@ export default function ProjectInquiryForm() {
     }
 
     try {
-          setLoading(true); // ✅ Disable the button
+      setLoading(true); // ✅ Disable the button
 
       const formBody = new URLSearchParams();
       formBody.append("fullName", formData.fullName);
@@ -73,15 +73,20 @@ export default function ProjectInquiryForm() {
       const result = await res.json();
       if (!res.ok) throw new Error(result.error || "Unknown error");
 
-    setSubmitted(true);
-    setFormData({ fullName: "", email: "", contactNo: "", projectDetails: "" });
-    router.push(`/thank-you?name=${encodeURIComponent(formData.fullName)}`);
-  } catch (err) {
-    alert(`Error submitting form: ${err.message}`);
-  } finally {
-    setLoading(false);
-  }
-};
+      setSubmitted(true);
+      setFormData({
+        fullName: "",
+        email: "",
+        contactNo: "",
+        projectDetails: "",
+      });
+      router.push(`/thank-you?name=${encodeURIComponent(formData.fullName)}`);
+    } catch (err) {
+      alert(`Error submitting form: ${err.message}`);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <section className="relative text-white">
@@ -94,13 +99,16 @@ export default function ProjectInquiryForm() {
 
           <ul className="space-y-3 sm:space-y-4 text-white/80 text-sm sm:text-base">
             <li className="flex items-start gap-3">
-              <span className="text-[#833DFA] text-lg">✅</span> We will respond to you within 12 hours
+              <span className="text-[#833DFA] text-lg">✅</span> We will respond
+              to you within 12 hours
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-[#833DFA] text-lg">✅</span> We’ll sign an NDA if requested
+              <span className="text-[#833DFA] text-lg">✅</span> We’ll sign an
+              NDA if requested
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-[#833DFA] text-lg">✅</span> Access to dedicated consultant specialists
+              <span className="text-[#833DFA] text-lg">✅</span> Access to
+              dedicated consultant specialists
             </li>
           </ul>
 
@@ -129,7 +137,9 @@ export default function ProjectInquiryForm() {
                 onChange={handleChange}
                 className="bg-transparent border-b border-white/20 py-2 w-full placeholder-white/40 focus:outline-none"
               />
-              {errors.fullName && <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>}
+              {errors.fullName && (
+                <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>
+              )}
             </div>
 
             <div>
@@ -141,7 +151,9 @@ export default function ProjectInquiryForm() {
                 onChange={handleChange}
                 className="bg-transparent border-b border-white/20 py-2 w-full placeholder-white/40 focus:outline-none"
               />
-              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+              {errors.email && (
+                <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+              )}
             </div>
 
             <div>
@@ -153,7 +165,9 @@ export default function ProjectInquiryForm() {
                 onChange={handleChange}
                 className="bg-transparent border-b border-white/20 py-2 w-full placeholder-white/40 focus:outline-none"
               />
-              {errors.contactNo && <p className="text-red-500 text-sm mt-1">{errors.contactNo}</p>}
+              {errors.contactNo && (
+                <p className="text-red-500 text-sm mt-1">{errors.contactNo}</p>
+              )}
             </div>
           </div>
 
@@ -168,18 +182,17 @@ export default function ProjectInquiryForm() {
             />
           </div>
 
-         <button
-  type="submit"
-  disabled={loading}
-  className={`w-full py-3 rounded-full font-semibold transition ${
-    loading
-      ? "bg-white/20 text-white/60 cursor-not-allowed"
-      : "bg-white text-black hover:bg-gray-100"
-  }`}
->
-  {loading ? "Submitting..." : "Submit Inquiry"}
-</button>
-
+          <button
+            type="submit"
+            disabled={loading}
+            className={`w-full py-3 rounded-full font-semibold transition ${
+              loading
+                ? "bg-white/20 text-white/60 cursor-not-allowed"
+                : "bg-white text-black hover:bg-gray-100"
+            }`}
+          >
+            {loading ? "Submitting..." : "Submit Inquiry"}
+          </button>
 
           {/* {submitted && (
             <p className="text-green-400 text-sm mt-2">Your inquiry was submitted successfully!</p>
