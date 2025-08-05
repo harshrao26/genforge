@@ -7,7 +7,7 @@ const API_BASE = process.env.API_BASE_URL;
 // ✅ Fetch individual blog
 async function getBlog(slug) {
   try {
-    const res = await fetch(`${API_BASE}/api/blogs/${slug}`, {
+    const res = await fetch(`/api/blogs/${slug}`, {
       cache: "no-store",
     });
 
@@ -23,7 +23,7 @@ async function getBlog(slug) {
 // ✅ SEO Metadata Generation
 export async function generateMetadata({ params }) {
   try {
-    const res = await fetch(`${API_BASE}/api/blogs/${params.slug}`, {
+    const res = await fetch(`/api/blogs/${params.slug}`, {
       cache: "no-store",
     });
 
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }) {
 // ✅ Static generation for all slugs (optional)
 export async function generateStaticParams() {
   try {
-    const res = await fetch(`${API_BASE}/api/blogs`, {
+    const res = await fetch(`/api/blogs`, {
       cache: "no-store",
     });
 
