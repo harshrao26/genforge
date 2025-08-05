@@ -57,14 +57,14 @@ export default function BlogsClientUI({ blog }) {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full h-[60vh] overflow-hidden">
+      <section className="relative w-full h-[60vh]  overflow-hidden">
         <img
           src={blog.image}
           alt={blog.title}
           className="w-full  h-full object-cover brightness-50 absolute"
         />
-        <div className="absolute inset-0 flex flex-col justify-end px-0 md:px-10 pb-10 text-white max-w-7xl mx-auto">
-          <span className="bg-white/20 backdrop-blur px- py-1 rounded-full text-xs font-medium w-fit mb-3">
+        <div className="absolute md:px-0 px-4 inset-0 flex flex-col justify-end px-0 md:px-10 pb-10 text-white max-w-7xl mx-auto">
+          <span className="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-xs font-medium w-fit mb-3">
             {blog.category}
           </span>
           <h1 className="text-4xl md:text-5xl font-semibold mb-3 special-font ">

@@ -84,7 +84,7 @@ export default function Navbar() {
         <div className="md:hidden">
           <button
             onClick={() => setMobileMenuOpen(true)}
-            className="text-xl focus:outline-none"
+            className="text-xl text-black focus:outline-none"
             aria-label="Open menu"
           >
             <HiOutlineMenuAlt3 />
