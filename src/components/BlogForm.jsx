@@ -1,5 +1,4 @@
-"use client";
-
+ 
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
  import slugify from "slugify";
@@ -113,6 +112,13 @@ export default function BlogForm({ initialData = {}, onSubmit }) {
       className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-md"
     >
       <h1 className="text-3xl font-bold mb-6">📝 Blog Editor</h1>
+
+       <Section title="Content">
+        <RichTextEditor
+          value={form.content}
+          onChange={(val) => setForm({ ...form, content: val })}
+        />
+      </Section>
 
       {/* Basic Info */}
       <Section title="Basic Info">
@@ -317,12 +323,7 @@ export default function BlogForm({ initialData = {}, onSubmit }) {
       </Section>
 
       {/* Rich Content */}
-      <Section title="Content">
-        <RichTextEditor
-          value={form.content}
-          onChange={(val) => setForm({ ...form, content: val })}
-        />
-      </Section>
+     
 
       {/* Schema Markup */}
       <Section title="Schema Markup">

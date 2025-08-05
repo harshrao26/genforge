@@ -33,7 +33,7 @@ const Page = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await fetch(`/api/local-blogs`);
+        const res = await fetch(`/api/blogs`);
         const data = await res.json();
         if (data.success) {
           const formatted = data.blogs.map((blog) => ({
