@@ -1,10 +1,10 @@
- import "./globals.css";
- 
-// ✅ SEO + social metadata (Next.js App Router syntax)
+import "./globals.css";
+
 export const metadata = {
-  title: "GenForge Studio – Growth-Focused Web Solutions",
+  title:
+    "GenForge Studio – Fast Websites, Global Growth Partner for Businesses",
   description:
-    "We help local businesses get online fast – with websites, automation, hosting, and growth tools all under one roof.",
+    "We help local and global businesses get online fast – with websites, SEO, automation, hosting, and growth tools all under one roof.",
   keywords: [
     "web design",
     "small business website",
@@ -19,7 +19,7 @@ export const metadata = {
     "website automation",
     "website hosting",
     "website development",
-    "website design", 
+    "website design",
     "website management",
     "website optimization",
     "website maintenance",
@@ -44,7 +44,7 @@ export const metadata = {
     "website conversion optimization",
     "website customer support",
     "website online presence",
-    "website brand identity", 
+    "website brand identity",
     "business website design",
     "business website development",
     "business website hosting",
@@ -53,7 +53,7 @@ export const metadata = {
     "business website maintenance",
     "business website analytics",
     "business website performance",
-    "business website security",    
+    "business website security",
     "business website support",
     "business website updates",
     "business website content management",
@@ -64,20 +64,19 @@ export const metadata = {
     "business online presence",
     "business lead generation",
   ],
- 
   authors: [{ name: "GenForge Studio", url: "https://genforgestudio.com" }],
   creator: "GenForge Studio",
   metadataBase: new URL("https://genforgestudio.com"),
-
   openGraph: {
-    title: "GenForge Studio – Growth-Focused Web Solutions",
+    title:
+      "GenForge Studio – Fast Websites, Global Growth Partner for Businesses",
     description:
       "We help local businesses get online fast – with websites, automation, hosting, and growth tools all under one roof.",
     url: "https://genforgestudio.com",
     siteName: "GenForge Studio",
     images: [
       {
-        url: "/my-app/public/logo.png", // ✅ Place this image in /public
+        url: "/my-app/public/logo.png",
         width: 1200,
         height: 630,
         alt: "GenForge Studio Website Screenshot",
@@ -85,15 +84,14 @@ export const metadata = {
     ],
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
-    title: "GenForge Studio – Growth-Focused Web Solutions",
+    title:
+      "GenForge Studio – Fast Websites, Global Growth Partner for Businesses",
     description:
       "We help local businesses get online fast – with websites, automation, hosting, and growth tools all under one roof.",
-    images: ["/logo.png"], // ✅ Place this image in /public
+    images: ["/logo.png"],
   },
-
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
@@ -104,11 +102,58 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased`}
-      >
-         {children}
-       </body>
+      <head>
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://genforgestudio.com" />
+
+        {/* ✅ Google Tag Manager Script */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-K27XWTN6');`,
+          }}
+        />
+      </head>
+
+      <body className="antialiased">
+        {/* ✅ Google Tag Manager NoScript */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-K27XWTN6"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+
+        {children}
+
+        {/* ✅ LocalBusiness Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "GenForge Studio",
+              url: "https://genforgestudio.com",
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "IN",
+              },
+              sameAs: [
+                "https://instagram.com/genforgestudio",
+                "https://linkedin.com/company/genforge-studio",
+                "https://facebook.com/genforgestudio",
+                "https://youtube.com/@genforgestudio",
+              ],
+            }),
+          }}
+        />
+      </body>
     </html>
   );
 }

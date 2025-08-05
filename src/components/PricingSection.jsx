@@ -77,7 +77,7 @@ const PricingSection = () => {
  <div className="absolute -top-96 h-full w-80 left-0  -rotate-60  bg-gradient-to-bl from-[#833DFA] to-transparent blur-3xl"></div>
 
       <div className="text-center mb-10">
-        <h1 className="text-5xl font-semibold mb-4">Pricing</h1>
+        <p className="text-5xl font-semibold mb-4">Pricing</p>
         <p className="text-gray-300 max-w-xl mx-auto">
           Choose the plan that suits your business best.
         </p>

@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
-import EditorJsRenderer from './EditorJsRenderer'
-import BlogSidebarContactForm from './BlogSidebarContactForm'
+import EditorJsRenderer from "./EditorJsRenderer";
+import BlogSidebarContactForm from "./BlogSidebarContactForm";
 
 // Reusable text cleaner
 function cleanText(input = "") {
@@ -27,7 +27,6 @@ function cleanHtml(html = "") {
 }
 
 // Renders content blocks
- 
 
 function FaqItem({ faq }) {
   const [open, setOpen] = useState(false);
@@ -68,7 +67,9 @@ export default function BlogsClientUI({ blog }) {
           <span className="bg-white/20 backdrop-blur px- py-1 rounded-full text-xs font-medium w-fit mb-3">
             {blog.category}
           </span>
-          <h1 className="text-4xl md:text-5xl font-semibold mb-3 special-font ">{blog.title}</h1>
+          <h1 className="text-4xl md:text-5xl font-semibold mb-3 special-font ">
+            {blog.title}
+          </h1>
           <p className="text-sm text-gray-300">
             {blog.author || "Unknown"} •{" "}
             {new Date(blog.createdAt).toLocaleDateString("en-GB", {
@@ -81,24 +82,23 @@ export default function BlogsClientUI({ blog }) {
       </section>
 
       {/* Main Content Area */}
-      <div className="max-w-7xl max-w-7xl   px-4 mt-10 flex flex-col lg:flex-row gap-8">
+      <div className="max-w-7xl mx-auto md:px-0 px-4 mt-10 flex flex-col lg:flex-row gap-8">
         <div className="w-full  ">
-         <EditorJsRenderer
-  content={
-    typeof blog.content === "string"
-      ? JSON.parse(blog.content)
-      : blog.content
-  }
-/>
+          <EditorJsRenderer
+            content={
+              typeof blog.content === "string"
+                ? JSON.parse(blog.content)
+                : blog.content
+            }
+          />
         </div>
 
         {/* Sidebar */}
-       
       </div>
 
       {/* Connected Services */}
       {blog.connectedServices?.length > 0 && (
-        <section className="max-w-7xl mx-auto py-10 px-4">
+        <section className="max-w-7xl mx-auto py-10 md:px-0 px-4">
           <h2 className="text-2xl font-medium mb-4">Connected Services</h2>
           <ul className="list-disc list-inside">
             {blog.connectedServices.map((service, index) => (

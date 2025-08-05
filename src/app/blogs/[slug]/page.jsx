@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";  
 import { notFound } from "next/navigation";
 import BlogsClientUI from "@/components/BlogsClientUI";
 
@@ -19,6 +20,8 @@ async function getBlog(slug) {
     return null;
   }
 }
+
+
 
 // ✅ SEO Metadata Generation
 export async function generateMetadata({ params }) {

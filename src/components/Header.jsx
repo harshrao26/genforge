@@ -62,7 +62,7 @@ export default function Navbar() {
           className="text-xl font-semibold flex items-center gap-3"
         >
           <Image src={logo} alt="GenForge Studio Logo" height={40} className="animate-in" />
-          <h1>GenForge Studio</h1>
+          <p>GenForge Studio</p>
         </Link>
 
         {/* Desktop Nav (Hidden on mobile) */}

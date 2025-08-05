@@ -78,10 +78,9 @@ export default function Hero({ onViewPricingClick }) {
           Your Partner in Digital Growth, <br /> Not Just a Website Builder
         </h1>
 
-        <p className="mt-4 max-w-2xl text-lg sm:text-xl text-gray-200">
-          We help local businesses get online, fast — complete with design,
-          hosting, automation, and growth tools.
-        </p>
+      <p className="mt-4 max-w-2xl text-lg sm:text-xl text-gray-200">
+  Fast, affordable website design for businesses — we help local brands get online quickly with complete solutions including design, hosting, automation, and growth tools.
+</p>
 
         {/* CTA Buttons */}
         <div className="mt-8 flex sm:flex-row items-center gap-4 pointer-events-auto">
