@@ -65,12 +65,11 @@ export default function Navbar() {
           <p>GenForge Studio</p>
         </Link>
 
+ 
         {/* Desktop Nav (Hidden on mobile) */}
         <div className="hidden md:flex items-center gap-4">
-          <MdTranslate className="text-lg cursor-pointer" />
-          <FaGlobe className="text-lg cursor-pointer" />
-          <div className="h-5 w-px bg-white mx-2" />
-
+           
+ 
           <button
   onClick={() => setOpenModal(true)}
             className="px-4 py-2 border border-white rounded-full text-sm hover:bg-white hover:text-black transition"

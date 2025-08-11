@@ -17,6 +17,9 @@ import CallToAction from "@/components/CallToAction";
 import ContactForm from "@/components/ContactForm";
 import Test from "@/components/Test";
 import FaqSection from "@/components/FaqSection";
+import HeroProjects from "@/components/HeroProjects";
+
+
 
 import logo from '@/assets/logo.png'
 
@@ -70,8 +73,8 @@ const Home = () => {
       <PricingSection  ref={pricingRef} />
       {/* <Projects /> */}
       <AboutSection />
+<HeroProjects />
       <ContactForm />
-
 
       {/* <CallToAction /> */}
       <FaqSection />

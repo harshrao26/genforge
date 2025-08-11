@@ -78,6 +78,9 @@ const Footer = () => {
 
         <div className="flex max-w-7xl mx-auto flex-col sm:flex-col justify-between items-center   pt-6 text-sm text-gray-500">
           <div className="flex md:flex-col gap-4 mt-4 sm:mt-0">
+            <Link href="/projects" className="hover:text-white">
+            Projects
+            </Link>
             <Link href="/blogs" className="hover:text-white">
              Read Blogs
             </Link>
