@@ -124,11 +124,11 @@ const AddOnServices = () => {
             </div>
 
             {/* Pricing Card */}
-            <div className="w-full md:w-60  bg-opacity-80 rounded-2xl px-6 py-4 text-center border border-gray-100 shrink-0">
+            {/* <div className="w-full md:w-60  bg-opacity-80 rounded-2xl px-6 py-4 text-center border border-gray-100 shrink-0">
               
               <p className="text-2xl font-semibold text-white">{item.price}/-</p>
   
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
