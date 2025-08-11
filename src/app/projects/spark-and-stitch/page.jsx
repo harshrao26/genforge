@@ -61,15 +61,14 @@ export default function SparkAndStitchCaseStudy() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Open Spark & Stitch website in a new tab"
-          className=" flex items-center gap-2 text-3xl font-semibold text-white sm:text-4xl"
+          className=" md:flex flex-col items-center gap-2 text-3xl font-semibold text-white sm:text-4xl"
         >
           <span className="text-3xl font-semibold sm:text-4xl">
             Spark & Stitch
           </span>
 
           {/* divider */}
-          <span className="h-6 w-px bg-white/10" aria-hidden />
-
+ 
           {/* “Visit” pill */}
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-gradient-to-r from-purple-500/10 to-purple-400/10 px-3 py-1 text-sm text-gray-200">
             Visit website

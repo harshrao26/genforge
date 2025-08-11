@@ -30,15 +30,9 @@ export default function IrvineHospitalityCaseStudy() {
       <div className="pointer-events-none absolute -bottom-64 -right-40 h-[42rem] w-[42rem] -rotate-12 bg-gradient-to-tr from-cyan-400/20 via-blue-500/10 to-transparent blur-3xl" />
 
       {/* sticky progress */}
-      <div className="sticky top-0 z-40 h-[3px] w-full bg-white/5 backdrop-blur">
-        <div
-          className="h-full bg-gradient-to-r from-purple-500 to-cyan-400 transition-[width]"
-          style={{ width: `${progress}%` }}
-        />
-      </div>
-
+      
       {/* header / breadcrumb */}
-      <div className="relative mx-auto max-w-7xl px-6 pt-10">
+      <div className="relative mx-auto max-w-7xl px-6 py-10">
         <nav className="mb-4 text-sm text-gray-400">
           <Link href="/" className="hover:text-white/90">Home</Link>
           <span className="mx-2">/</span>
@@ -50,7 +44,7 @@ export default function IrvineHospitalityCaseStudy() {
 
       {/* hero */}
       <header className="relative mx-auto max-w-7xl px-6 pb-10">
-        <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs tracking-wide backdrop-blur-sm">
+        <div className="inline-flex items-center rounded-full  border border-white/10 bg-white/5 px-3 py-1 text-xs tracking-wide backdrop-blur-sm">
           <span className="mr-2 inline-block h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
           Case Study
         </div>

@@ -29,7 +29,7 @@ const projects = [
 
 export default function FeaturedProjects() {
   return (
-    <section className="relative mx-auto w-full max-w-7xl px -6 overflow-hidden py-16 text-gray-100">
+    <section className="relative mx-auto w-full max-w-7xl px-4 overflow-hidden py-16 text-gray-100">
       {/* soft gradient orbs */}
       <div className="pointer-events-none absolute -top-24 -left-24 h-80 w-80 rotate-12 bg-gra dient-to-br from-[#833DFA]/30 via-purple-500/10 to-transparent blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -right-24 h-80 w-80 -rotate-12 bg-gradient-to-tr from-purple-400/20 via-blue-500/10 to-transparent blur-3xl" />
@@ -61,6 +61,8 @@ export default function FeaturedProjects() {
       {/* grid: 1 big + 2 small on desktop, 1-col on mobile */}
       <div className="relative grid grid-cols-1 gap-6 md:grid-cols-3">
         {projects.map((p, i) => (
+            <Link href={`/projects/${p.slug}`}>
+           
           <article
             key={p.slug}
             className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1 ${
@@ -117,6 +119,7 @@ export default function FeaturedProjects() {
               }}
             />
           </article>
+           </Link>
         ))}
       </div>
 
