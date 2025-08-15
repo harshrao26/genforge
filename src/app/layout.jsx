@@ -141,7 +141,7 @@ export const metadata = {
     locale: "en",
     images: [
       {
-        url: "/og/home.jpg", // ← host a 1200x630 OG image at this path
+        url: "/og/home.png", // ← host a 1200x630 OG image at this path
         width: 1200,
         height: 630,
         alt: "GenForge Studio — Projects & Results",
@@ -153,7 +153,7 @@ export const metadata = {
     title: "GenForge Studio — Global Web & App Development",
     description:
       "Websites, apps, SaaS, and automation built for speed, scalability, and growth — serving clients worldwide.",
-    images: ["/og/home.jpg"],
+    images: ["/og/home.png"],
   },
   icons: {
     icon: "/favicon.ico",
@@ -161,9 +161,9 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
   // Optional: add your Search Console/Bing verification tokens when you have them
- verification: {
-  google: "W3rx_ZJ1vFtmER5CPCc-xSuPwCBMiYBKUqZc0HDuJWg",
- },
+  verification: {
+    google: "W3rx_ZJ1vFtmER5CPCc-xSuPwCBMiYBKUqZc0HDuJWg",
+  },
 };
 export default function RootLayout({ children }) {
   return (
@@ -194,7 +194,7 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        {/* ✅ Organization Schema (global) */}
+        {/* ✅ Organization (enhanced) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -202,6 +202,11 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "GenForge Studio",
+              alternateName: [
+                "genforge studio",
+                "Genforge Studio",
+                "genforgestudio",
+              ], // ← helps with lowercase & variations
               url: "https://genforgestudio.com",
               logo: "https://genforgestudio.com/logo.png",
               sameAs: [
@@ -223,6 +228,26 @@ export default function RootLayout({ children }) {
           }}
         />
 
+        {/* ✅ Brand (new) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Brand",
+              name: "GenForge Studio",
+              alternateName: [
+                "genforge studio",
+                "Genforge Studio",
+                "genforgestudio",
+              ],
+              url: "https://genforgestudio.com",
+              logo: "https://genforgestudio.com/logo.png",
+              description:
+                "GenForge Studio is a global web & app development agency building fast, conversion-focused websites, SaaS, e-commerce and automation.",
+            }),
+          }}
+        />
         {/* ✅ WebSite + SearchAction Schema */}
         <script
           type="application/ld+json"
@@ -240,7 +265,6 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
-
 
         <Analytics />
       </body>
