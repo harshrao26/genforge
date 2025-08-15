@@ -1,4 +1,5 @@
 import "./globals.css";
+import Analytics from "@/components/Analytics"; // adjust path
 
 export const metadata = {
   metadataBase: new URL("https://genforgestudio.com"),
@@ -171,31 +172,28 @@ export default function RootLayout({ children }) {
       <head>
         {/* Canonical URL */}
         <link rel="canonical" href="https://genforgestudio.com" />
-
-        {/* ✅ Google Tag Manager Script */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-K27XWTN6');`,
-          }}
-        />
       </head>
 
       <body className="antialiased">
-        {/* ✅ Google Tag Manager NoScript */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-K27XWTN6"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
-
         {children}
+
+        {/* Google Analytics 4 */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-V3Q4Z90H7V`}
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-V3Q4Z90H7V', {
+        page_path: window.location.pathname,
+      });
+    `,
+          }}
+        />
 
         {/* ✅ Organization Schema (global) */}
         <script
@@ -211,7 +209,7 @@ export default function RootLayout({ children }) {
                 "https://instagram.com/genforgestudio",
                 "https://linkedin.com/company/genforge-studio",
                 "https://facebook.com/genforgestudio",
-                "https://youtube.com/@genforgestudio"
+                "https://youtube.com/@genforgestudio",
               ],
               areaServed: "Worldwide",
               contactPoint: [
@@ -219,10 +217,10 @@ export default function RootLayout({ children }) {
                   "@type": "ContactPoint",
                   contactType: "sales",
                   email: "hello@genforgestudio.com",
-                  availableLanguage: ["en", "hi"]
-                }
-              ]
-            })
+                  availableLanguage: ["en", "hi"],
+                },
+              ],
+            }),
           }}
         />
 
@@ -238,13 +236,15 @@ export default function RootLayout({ children }) {
               potentialAction: {
                 "@type": "SearchAction",
                 target: "https://genforgestudio.com/search?q={query}",
-                "query-input": "required name=query"
-              }
-            })
+                "query-input": "required name=query",
+              },
+            }),
           }}
         />
+
+
+        <Analytics />
       </body>
     </html>
   );
 }
- 
