@@ -161,10 +161,9 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
   // Optional: add your Search Console/Bing verification tokens when you have them
-  verification: {
-    google: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    other: { "msvalidate.01": ["xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"] },
-  },
+ verification: {
+  google: "W3rx_ZJ1vFtmER5CPCc-xSuPwCBMiYBKUqZc0HDuJWg",
+ },
 };
 export default function RootLayout({ children }) {
   return (
