@@ -6,19 +6,14 @@ import sns from '@/assets/case-study/sns.png'
 import ih from '@/assets/case-study/ih.png'
 import Image from "next/image";
 
-// ------------------------------------------------------------------
-// Projects Page — GenForge Studio
-// Eye-soothing, awards-inspired case study grid that matches the
-// dark, gradient-forward aesthetic of your landing page.
-// ------------------------------------------------------------------
-
+ 
 const CASE_STUDIES = [
   {
     slug: "spark-and-stitch",
     title: "Spark & Stitch — UPI‑first E‑commerce.",
     summary:
       "E‑commerce build with Cashfree (UPI‑first), Cloudinary media pipeline, fast dev reloads, and a realtime admin for orders & payments.",
-    meta: { location: "Ahmedabad / Surat", year: "2025", role: "Full‑stack" },
+    meta: { location: "Ahmedabad", year: "2025", role: "Full‑stack" },
     tags: ["E‑commerce", "UPI", "Cashfree", "Cloudinary"],
     cover:
       sns,
@@ -29,7 +24,7 @@ const CASE_STUDIES = [
   title: "Irvine Hospitality — FF&E E-commerce & Admin",
   summary:
     "Modern hospitality-grade storefront with admin panel for FF&E procurement — product catalog management, order tracking, and workflows aligned to global hospitality standards.",
-  meta: { location: "Newport Beach / Global", year: "2025", role: "Full-stack" },
+  meta: { location: "Newport Beach, CA / Global", year: "2025", role: "Full-stack" },
   tags: ["Hospitality", "FF&E", "Admin Panel"],
   cover: ih, // Replace with Irvine cover image when available
   category: "Hospitality",
@@ -109,7 +104,7 @@ export default function ProjectsPage() {
         {/* Grid */}
         <section className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {items.map((p) => (
-            <article
+            <Link href={`/projects/${p.slug}`}
               key={p.slug}
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1"
             >
@@ -140,7 +135,7 @@ export default function ProjectsPage() {
                   {p.tags.map((t) => (
                     <span
                       key={t}
-                      className="rounded-full bg-gradient-to-tr from-purple-500/15 to-cyan-400/15 px-2 py-0.5 text-xs text-gray-300"
+                      className="rounded-full bg-gradient-to-tr from-purple-500/15 to-purple-950 px-2 py-0.5 text-xs text-gray-300"
                     >
                       {t}
                     </span>
@@ -167,7 +162,7 @@ export default function ProjectsPage() {
                 background:
                   "radial-gradient(800px 200px at var(--x,50%) var(--y,50%), rgba(131,61,250,0.12), transparent 40%)",
               }}></div>
-            </article>
+            </Link>
           ))}
         </section>
 

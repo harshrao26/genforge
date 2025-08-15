@@ -1,104 +1,170 @@
 import "./globals.css";
 
 export const metadata = {
-  title:
-    "GenForge Studio – Fast Websites, Global Growth Partner for Businesses",
+  metadataBase: new URL("https://genforgestudio.com"),
+  title: "GenForge Studio — Fast Websites & Apps for Global Growth",
   description:
-    "We help local and global businesses get online fast – with websites, SEO, automation, hosting, and growth tools all under one roof.",
+    "We build fast, conversion-driven websites, apps, and automation for startups, SMBs, and enterprises worldwide. Experts in Next.js, e-commerce, SaaS, SEO, and performance.",
+  // You can keep your keyword array here if you like, but note Google ignores it.
   keywords: [
-    "web design",
-    "small business website",
-    "next.js agency",
-    "website builder",
-    "SEO hosting",
-    "GenForge Studio",
-    "local business web solutions",
-    "website with lead forms",
-    "business growth",
-    "digital marketing",
-    "website automation",
-    "website hosting",
-    "website development",
-    "website design",
-    "website management",
-    "website optimization",
-    "website maintenance",
-    "website analytics",
-    "website performance",
-    "website security",
-    "website support",
-    "website updates",
-    "website content management",
-    "website user experience",
-    "website accessibility",
-    "website mobile optimization",
-    "website e-commerce",
-    "website blogging",
-    "website portfolio",
-    "website landing pages",
-    "website contact forms",
-    "website social media integration",
-    "website analytics integration",
-    "website email marketing",
-    "website lead generation",
-    "website conversion optimization",
-    "website customer support",
-    "website online presence",
-    "website brand identity",
-    "business website design",
-    "business website development",
-    "business website hosting",
-    "business website management",
-    "business website optimization",
-    "business website maintenance",
-    "business website analytics",
-    "business website performance",
-    "business website security",
-    "business website support",
-    "business website updates",
-    "business website content management",
-    "business website user experience",
-    "business automation",
-    "business growth tools",
-    "business digital marketing",
-    "business online presence",
-    "business lead generation",
+    "web design agency",
+    "website development company",
+    "Next.js web development",
+    "full-stack development services",
+    "e-commerce website design",
+    "SaaS product development",
+    "business automation solutions",
+    "custom web application development",
+    "UI/UX design services",
+    "website performance optimization",
+    "search engine optimization services",
+    "SEO-friendly web design",
+    "global web development agency",
+    "enterprise website development",
+    "cloud-based web applications",
+    "cross-platform web development",
+    "responsive website design",
+    "progressive web apps",
+    "e-commerce performance optimization",
+    "payment gateway integration",
+    "UPI and global payments",
+    "Cloudinary media optimization",
+    "API integration services",
+    "custom CMS development",
+    "headless CMS websites",
+    "digital transformation services",
+    "real-time web applications",
+    "website speed optimization",
+    "conversion rate optimization",
+    "multi-language website development",
+    "international website development",
+    "secure web hosting services",
+    "web application maintenance",
+    "website redesign services",
+    "B2B website development",
+    "B2C website development",
+    "mobile-first website design",
+    "custom software solutions",
+    "global SaaS platform development",
+    "best website development company",
+    "top website development agency",
+    "affordable website design company",
+    "best app development company",
+    "mobile app development agency",
+    "affordable app developers",
+    "hire web developers",
+    "hire app developers",
+    "small business website design",
+    "website design for startups",
+    "app development for small business",
+    "best website development company in India",
+    "top web development agency in India",
+    "best app development company in India",
+    "website development company in Ahmedabad",
+    "web development company in Surat",
+    "app development company in Ahmedabad",
+    "app development company in Surat",
+    "website development company in Lucknow",
+    "app development company in Lucknow",
+    "website development company in Gurugram",
+    "app development company in Gurugram",
+    "website development company in Noida",
+    "app development company in Noida",
+    "website development company in Delhi",
+    "app development company in Delhi",
+    "website development company in Haryana",
+    "app development company in Haryana",
+    "website development company in Mumbai",
+    "app development company in Mumbai",
+    "website development company in Bangalore",
+    "app development company in Bangalore",
+    "website development company in Pune",
+    "app development company in Pune",
+    "best website development company in USA",
+    "app development company in USA",
+    "web development agency in UK",
+    "app development agency in UK",
+    "website development company in Australia",
+    "app development company in Australia",
+    "website development company in Canada",
+    "app development company in Canada",
+    "website development company in Dubai",
+    "app development company in Dubai",
+    "website development company in Singapore",
+    "app development company in Singapore",
+    "website development company in Germany",
+    "app development company in Germany",
+    "website development company in France",
+    "app development company in France",
+    "global website development agency",
+    "international app development company",
+    "best SaaS development company",
+    "custom SaaS product development",
+    "e-commerce app development company",
+    "e-commerce website design agency",
+    "hire Next.js developers",
+    "hire React developers",
+    "hire Node.js developers",
+    "website design for local businesses",
+    "website design for restaurants",
+    "website design for retail stores",
+    "website design for service providers",
+    "website redesign services",
+    "website performance optimization",
+    "SEO-friendly website design",
+    "multi-language website development",
+    "secure web hosting services",
+    "web application maintenance",
+    "cross-platform mobile app development",
+    "progressive web apps development",
+    "business automation solutions",
+    "real-time web applications",
+    "conversion rate optimization services",
   ],
   authors: [{ name: "GenForge Studio", url: "https://genforgestudio.com" }],
   creator: "GenForge Studio",
-  metadataBase: new URL("https://genforgestudio.com"),
+  alternates: { canonical: "https://genforgestudio.com" },
+  robots: {
+    index: true,
+    follow: true,
+    maxSnippet: -1,
+    maxImagePreview: "large",
+  },
   openGraph: {
-    title:
-      "GenForge Studio – Fast Websites, Global Growth Partner for Businesses",
+    title: "GenForge Studio — Global Web & App Development",
     description:
-      "We help local businesses get online fast – with websites, automation, hosting, and growth tools all under one roof.",
+      "Websites, apps, SaaS, and automation built for speed, scalability, and growth — serving clients worldwide.",
     url: "https://genforgestudio.com",
     siteName: "GenForge Studio",
+    type: "website",
+    locale: "en",
     images: [
       {
-        url: "/my-app/public/logo.png",
+        url: "/og/home.jpg", // ← host a 1200x630 OG image at this path
         width: 1200,
         height: 630,
-        alt: "GenForge Studio Website Screenshot",
+        alt: "GenForge Studio — Projects & Results",
       },
     ],
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "GenForge Studio – Fast Websites, Global Growth Partner for Businesses",
+    title: "GenForge Studio — Global Web & App Development",
     description:
-      "We help local businesses get online fast – with websites, automation, hosting, and growth tools all under one roof.",
-    images: ["/logo.png"],
+      "Websites, apps, SaaS, and automation built for speed, scalability, and growth — serving clients worldwide.",
+    images: ["/og/home.jpg"],
   },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+  // Optional: add your Search Console/Bing verification tokens when you have them
+  verification: {
+    google: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    other: { "msvalidate.01": ["xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"] },
+  },
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -131,29 +197,54 @@ export default function RootLayout({ children }) {
 
         {children}
 
-        {/* ✅ LocalBusiness Schema */}
+        {/* ✅ Organization Schema (global) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
+              "@type": "Organization",
               name: "GenForge Studio",
               url: "https://genforgestudio.com",
-              address: {
-                "@type": "PostalAddress",
-                addressCountry: "IN",
-              },
+              logo: "https://genforgestudio.com/logo.png",
               sameAs: [
                 "https://instagram.com/genforgestudio",
                 "https://linkedin.com/company/genforge-studio",
                 "https://facebook.com/genforgestudio",
-                "https://youtube.com/@genforgestudio",
+                "https://youtube.com/@genforgestudio"
               ],
-            }),
+              areaServed: "Worldwide",
+              contactPoint: [
+                {
+                  "@type": "ContactPoint",
+                  contactType: "sales",
+                  email: "hello@genforgestudio.com",
+                  availableLanguage: ["en", "hi"]
+                }
+              ]
+            })
+          }}
+        />
+
+        {/* ✅ WebSite + SearchAction Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "GenForge Studio",
+              url: "https://genforgestudio.com",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://genforgestudio.com/search?q={query}",
+                "query-input": "required name=query"
+              }
+            })
           }}
         />
       </body>
     </html>
   );
 }
+ 

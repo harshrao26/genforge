@@ -61,23 +61,23 @@ export default function SparkAndStitchCaseStudy() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Open Spark & Stitch website in a new tab"
-          className=" md:flex flex-col items-center gap-2 text-3xl font-semibold text-white sm:text-4xl"
+          className="  flex-col items-center gap-2 text-3xl font-semibold text-white sm:text-4xl"
         >
-          <span className="text-3xl font-semibold sm:text-4xl">
-            Spark & Stitch
-          </span>
+          <p className="text-3xl font-semibold sm:text-4xl">
+            Spark & Stitch ✨
+          </p>
 
           {/* divider */}
  
           {/* “Visit” pill */}
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-gradient-to-r from-purple-500/10 to-purple-400/10 px-3 py-1 text-sm text-gray-200">
+          <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-gradient-to-r from-purple-500/10 to-purple-400/10 px-3 py-1 text-sm text-gray-200">
             Visit website
             <MdArrowOutward
               className="translate-x-0 transition-transform duration-200 group-hover:translate-x-0.5"
               size={18}
               aria-hidden
             />
-          </span>
+          </p>
 
           {/* animated underline on the whole chip */}
           <span

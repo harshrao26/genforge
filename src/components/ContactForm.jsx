@@ -108,12 +108,7 @@ export default function ProjectInquiryForm() {
             <p className="text-[#ffffff] font-medium text-base sm:text-lg break-all">
               hello@genforgestudio.com
             </p>
-            {/* <p className="text-white/70 mt-2 text-sm">
-              Always busy and want to book an exact time to call?
-            </p>
-            <button className="mt-4 bg-white/10 hover:bg-white/20 text-white px-5 py-2 rounded-full text-sm font-medium transition">
-              Book a free call
-            </button> */}
+            
           </div>
         </div>
 

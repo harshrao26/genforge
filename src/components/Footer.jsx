@@ -112,6 +112,9 @@ const Footer = () => {
           GenForge Studio
         </p>
       </div>
+      <div className="bg-black h-10">
+
+      </div>
     </div>
   );
 };
