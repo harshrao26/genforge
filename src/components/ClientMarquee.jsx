@@ -9,12 +9,13 @@ import trygve from "@/assets/clients/trygve.png";
 import unigold from "@/assets/clients/unigold.jpeg";
 import zivora from "@/assets/clients/zivora.png";
 import af from "@/assets/clients/af.png";
-import image from "@/assets/clients/image.png";
+import ts from "@/assets/clients/ts.png";
+import ts2 from "@/assets/clients/ts2.png";
 
 import './clientMarquee.css'
  
 
-const logos = [ evz, fila, groovy, spark, trygve, af,  zivora, unigold, ];
+const logos = [ evz, fila, groovy, spark, af,  zivora, unigold, ts2 ];
 
 export default function ClientMarquee() {
   return (

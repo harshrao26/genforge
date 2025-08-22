@@ -3,7 +3,7 @@ import Addons from "./Addons";
  const plans = [
   {
     name: "Basic Plan",
-    price: "₹7,999",
+    price: "₹9,999",
     billing: "One-time",
     monthlyHosting: "₹999/month",
     color: "purple",
@@ -26,7 +26,7 @@ import Addons from "./Addons";
   },
   {
     name: "Growth Plan",
-    price: "₹19,999",
+    price: "₹24,999",
     billing: "One-time",
     monthlyHosting: "₹1,499/month",
     color: "purple",
