@@ -87,10 +87,10 @@ const PrivacyPolicy = () => {
         <p className="mt-2">
           To exercise your rights, please contact us at:{" "}
           <a
-            href="mailto:hello@genforgestudio@gmail.com"
+            href="mailto:hello@genforgestudio.com"
             className="text-blue-600 underline"
           >
-            hello@genforgestudio@gmail.com
+            hello@genforgestudio.com
           </a>
         </p>
       </section>
@@ -124,10 +124,10 @@ const PrivacyPolicy = () => {
         <p className="mt-2">
           📧{" "}
           <a
-            href="mailto:hello@genforgestudio@gmail.com"
+            href="mailto:hello@genforgestudio.com"
             className="text-blue-600 underline"
           >
-            hello@genforgestudio@gmail.com
+            hello@genforgestudio.com
           </a>
         </p>
       </section>

@@ -152,10 +152,10 @@ const TermsAndConditions = () => {
           <p>
             If you have any questions about these Terms, please contact us at{" "}
             <a
-              href="mailto:hello@genforgestudio@gmail.com"
+              href="mailto:hello@genforgestudio.com"
               className="text-blue-600 underline"
             >
-              hello@genforgestudio@gmail.com
+              hello@genforgestudio.com
             </a>
             .
           </p>

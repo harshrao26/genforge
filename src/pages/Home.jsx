@@ -22,6 +22,7 @@ import HeroProjects from "@/components/HeroProjects";
 import logo from "@/assets/logo.png";
 
 import WhyBusinessOwners from "@/components/WhyBusinessOwners";
+import TestimonialsMarquee from "@/components/TestimonialsMarquee";
 
 const Home = () => {
   const images = [{ src: logo, alt: "Image 1" }];
@@ -67,6 +68,7 @@ const Home = () => {
       {/* <Projects /> */}
       <AboutSection />
       <HeroProjects />
+      <TestimonialsMarquee speed="28s" />
       <ContactForm />
 
       {/* <CallToAction /> */}
