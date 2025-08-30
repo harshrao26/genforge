@@ -98,31 +98,21 @@ export default function ProjectInquiryForm() {
           </h2>
 
           <ul className="space-y-3 sm:space-y-4 text-white/80 text-sm sm:text-base">
-            <li className="flex items-start gap-3">
+            <li className="flex items-center gap-3">
               <span className="text-[#833DFA] text-lg">✅</span> We will respond
               to you within 12 hours
             </li>
-            <li className="flex items-start gap-3">
+            <li className="flex items-center gap-3">
               <span className="text-[#833DFA] text-lg">✅</span> We’ll sign an
               NDA if requested
             </li>
-            <li className="flex items-start gap-3">
+            <li className="flex items-center gap-3">
               <span className="text-[#833DFA] text-lg">✅</span> Access to
               dedicated consultant specialists
             </li>
           </ul>
 
-          <div className="pt-6 sm:pt-8">
-            <p className="text-[#ffffff] font-medium text-base sm:text-lg break-all">
-              hello@genforgestudio.com
-            </p>
-            {/* <p className="text-white/70 mt-2 text-sm">
-              Always busy and want to book an exact time to call?
-            </p>
-            <button className="mt-4 bg-white/10 hover:bg-white/20 text-white px-5 py-2 rounded-full text-sm font-medium transition">
-              Book a free call
-            </button> */}
-          </div>
+          
         </div>
 
         {/* Right Form */}

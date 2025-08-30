@@ -84,10 +84,10 @@ export default function ProjectInquiryForm() {
 };
 
   return (
-    <section className="relative text-white px-4 md:px-0">
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 sm:gap-16 bg-gradient-to-tr from-[#833DFA] via-black to-black p-6 sm:p-10 lg:p-20 rounded-2xl shadow-lg backdrop-blur-md">
+    <section className="relative py-20  text-white px-4 md:px-0">
+      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 sm:gap-16 bg-gradient-to-tr border-[#823dfa59] border-[1px] from-[#833DFA] via-black to-[#823dfa4a] p-6 sm:p-10 lg:p-20 rounded-2xl shadow-lg backdrop-blur-md">
         {/* Left Panel */}
-        <div className="space-y-6 sm:space-y-8">
+        <div className="space-y-6  sm:space-y-8">
           <h2 className="text-3xl sm:text-4xl font-medium capitalize mb-4">
             Tell us about your project
           </h2>

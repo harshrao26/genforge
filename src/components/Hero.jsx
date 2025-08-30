@@ -29,21 +29,20 @@ export default function Hero({ onViewPricingClick }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   useEffect(() => {
-  const timer = setTimeout(() => {
-    setIsModalOpen(true);
-  }, 4000); // 2 seconds
+    const timer = setTimeout(() => {
+      setIsModalOpen(true);
+    }, 5000);
 
-  return () => clearTimeout(timer); // cleanup if component unmounts
-}, []);
+    return () => clearTimeout(timer); // cleanup if component unmounts
+  }, []);
 
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black text-white">
       {showFloatingButton && (
         <button
           onClick={handleOpenModal}
-          className="bg-[#833dfa] z-[100000000] fixed bottom-6 right-6 text-white font-semibold px-6 py-3 rounded-full hover:bg-[#ab7aff] transition z-50"
+          className="bg-[#833dfa] z-[1000] fixed bottom-6 right-6 text-white font-semibold px-6 py-3 rounded-full hover:bg-[#ab7aff] transition "
         >
           Book Free Call
         </button>
@@ -78,9 +77,11 @@ export default function Hero({ onViewPricingClick }) {
           Your Partner in Digital Growth, <br /> Not Just a Website Builder
         </h1>
 
-      <p className="mt-4 max-w-2xl text-lg sm:text-xl text-gray-200">
-  Fast, affordable website design for businesses — we help local brands get online quickly with complete solutions including design, hosting, automation, and growth tools.
-</p>
+        <p className="mt-4 max-w-2xl text-lg sm:text-xl text-gray-200">
+          Fast, affordable website design for businesses — we help local brands
+          get online quickly with complete solutions including design, hosting,
+          automation, and growth tools.
+        </p>
 
         {/* CTA Buttons */}
         <div className="mt-8 flex sm:flex-row items-center gap-4 pointer-events-auto">
@@ -107,7 +108,7 @@ export default function Hero({ onViewPricingClick }) {
 
       {/* Modal Popup */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center px-4 animate-fade-in-fast">
+        <div className="fixed inset-0 z-[1000000] bg-black/80 flex items-center justify-center px-4 animate-fade-in-fast">
           <div className="relative bg-black max-w-4xl w-full rounded-2xl overflow-auto shadow-lg border border-white/10">
             <button
               onClick={handleCloseModal}
@@ -115,7 +116,6 @@ export default function Hero({ onViewPricingClick }) {
               aria-label="Close modal"
             >
               <FaTimes />
-              
             </button>
             <ModelForm />
           </div>
@@ -124,7 +124,6 @@ export default function Hero({ onViewPricingClick }) {
 
       {/* Animations */}
       <style jsx>{`
-
         @keyframes fadeInFast {
           from {
             opacity: 0;

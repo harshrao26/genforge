@@ -14,21 +14,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Cookie Settings – GenForge Studio",
+  title: "Thank You – GenForge Studio",
   description:
-    "Configure your cookie preferences for GenForge Studio — manage Strictly Necessary, Preferences, Statistics, and Marketing cookies.",
+    "Thank you for getting in touch with GenForge Studio! We appreciate your message and will respond as soon as possible.",
   openGraph: {
-    title: "Cookie Settings – GenForge Studio",
+    title: "Thank You – GenForge Studio",
     description:
-      "Configure your cookie preferences for GenForge Studio — manage Strictly Necessary, Preferences, Statistics, and Marketing cookies.",
-    url: "https://genforgestudio.com/cookies-settings",
+      "Thank you for contacting GenForge Studio. We appreciate your message and will get back to you shortly.",
+    url: "https://genforgestudio.com/thank-you",
     siteName: "GenForge Studio",
     images: [
       {
-        url: "https://genforgestudio.com/assets/og-cookies.png", // Replace with your actual OG image
+        url: "https://genforgestudio.com/assets/og-thankyou.png", // Replace with actual OG image URL
         width: 1200,
         height: 630,
-        alt: "Cookie Settings – GenForge Studio",
+        alt: "GenForge Studio Thank You",
       },
     ],
     locale: "en_US",
@@ -36,9 +36,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Cookie Settings – GenForge Studio",
+    title: "Thank You – GenForge Studio",
     description:
-      "Configure your cookie preferences — manage Strictly Necessary, Preferences, Statistics, and Marketing cookies.",
+      "Your message has been received — one of our team members will get back to you shortly.",
   },
 };
 

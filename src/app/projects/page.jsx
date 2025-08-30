@@ -5,6 +5,8 @@ import Link from "next/link";
 import sns from '@/assets/case-study/sns.png'
 import ih from '@/assets/case-study/ih.png'
 import Image from "next/image";
+import ts from "@/assets/case-study/try0.jpeg"
+import tp from "@/assets/case-study/tp.png"
 
  
 const CASE_STUDIES = [
@@ -30,6 +32,26 @@ const CASE_STUDIES = [
   category: "Hospitality",
 },
   
+ {
+    slug: "trygve-pixel",
+    title: "Trygve Pixel — Global Web Design Agency",
+    summary:
+      "High-performance website for Trygve Pixel, a design and development agency delivering growth-focused, scalable digital experiences for startups and enterprises worldwide.",
+    meta: { location: "Lucknow, India / Global", year: "2025", role: "Design & Development" },
+    tags: ["Agency", "Next.js", "SEO", "Web Design"],
+    cover: tp, // Replace with Trygve Pixel cover image import
+    category: "Agency",
+  },
+  {
+    slug: "trygve-studio",
+    title: "Trygve Studio — Architecture & Interior Design",
+    summary:
+      "Digital presence for Trygve Studio, showcasing architecture, construction, and interior design projects with immersive visuals and modern web storytelling.",
+    meta: { location: "Lucknow, India", year: "2025", role: "Design & Development" },
+    tags: ["Architecture", "Construction", "Interior Design"],
+    cover: ts, // Replace with Trygve Studio cover image import
+    category: "Architecture",
+  },
 ];
 
 const CATEGORIES = ["All", "E‑commerce", "SaaS", "Branding"];

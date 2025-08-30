@@ -62,7 +62,7 @@ export default function TestimonialsMarquee() {
 
   return (
     <section className="relative w-full overflow-hidden bg-[#000000] py-12">
-         <h2 className="text-5xl text-center text-white font-semibold mb-4">
+         <h2 className="text-4xl text-center text-white font-semibold mb-4">
       What Our Clients Say
     </h2>
     <p className="text-gray-300 max-w-xl mx-auto text-center mb-10">
@@ -70,7 +70,7 @@ export default function TestimonialsMarquee() {
     </p>
       {/* subtle glow + edge fade (Dribbble vibe) */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_40%_at_15%_10%,rgba(131,61,250,0.10),transparent_50%),radial-gradient(50%_40%_at_85%_80%,rgba(236,72,153,0.08),transparent_45%)]" />
-      <div className="pointer-events-none b ackdrop-blur-xs z-100 absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#823dfa] to-transparent" />
+      <div className="pointer-events-none b ackdrop-blur-xs absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#823dfa] to-transparent" />
       <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#833DFA] to-transparent" />
 
       <div className="relative ">

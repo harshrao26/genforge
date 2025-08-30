@@ -6,7 +6,8 @@ import Image from "next/image";
 // Replace these with your own images or Cloudinary URLs
 import sparkCover from "@/assets/case-study/sns.png";
 import irvineCover from "@/assets/case-study/ih.png";
- 
+ import ts from "@/assets/case-study/try0.jpeg"
+
 const projects = [
   {
     slug: "spark-and-stitch",
@@ -24,6 +25,16 @@ const projects = [
     tags: ["Hospitality", "FF&E", "Admin Panel"],
     cover: irvineCover,
   },
+   {
+      slug: "trygve-studio",
+      title: "Trygve Studio — Architecture & Interior Design",
+      summary:
+        "Digital presence for Trygve Studio, showcasing architecture, construction, and interior design projects with immersive visuals and modern web storytelling.",
+      meta: { location: "Lucknow, India", year: "2025", role: "Design & Development" },
+      tags: ["Architecture", "Construction", "Interior Design"],
+      cover: ts, // Replace with Trygve Studio cover image import
+      category: "Architecture",
+    },
   
 ];
 
