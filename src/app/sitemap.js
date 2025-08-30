@@ -13,7 +13,6 @@ const STATIC_ROUTES = [
   "/projects",
   "/privacy-policy",
   "/terms-and-conditions",
-  "/thank-you",
 ];
 
 // ---- File patterns ----
