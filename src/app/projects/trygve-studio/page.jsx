@@ -1,6 +1,11 @@
 // /src/app/projects/trygve-studio/page.jsx
 import Image from "next/image";
 import Link from "next/link";
+import try1 from "@/assets/case-study/try0.jpeg"
+import t1 from "@/assets/case-study/t1.png"
+import t2 from "@/assets/case-study/t2.png"
+import t66 from "@/assets/case-study/t6.png"
+import t4 from "@/assets/case-study/t4.png"
 
 export const metadata = {
   title: "Trygve Studio — Case Study | GenForge Studio",
@@ -60,10 +65,11 @@ const metrics = [
 ];
 
 const gallery = [
-  { src: "/projects/trygve/hero.jpg", w: 1800, h: 1100, alt: "Hero — Trygve Studio" },
-  { src: "/projects/trygve/gallery-1.jpg", w: 1600, h: 1100, alt: "Project grid — Trygve Studio" },
-  { src: "/projects/trygve/gallery-2.jpg", w: 1600, h: 1100, alt: "Case study detail — Trygve Studio" },
-  { src: "/projects/trygve/gallery-3.jpg", w: 1600, h: 1100, alt: "Mobile views — Trygve Studio" },
+  { src: try1, w: 1800, h: 1100, alt: "Hero — Trygve Studio" },
+  { src: t1, w: 1600, h: 1100, alt: "Project grid — Trygve Studio" },
+  { src: t2, w: 1600, h: 1100, alt: "Blogs — Trygve Studio" },
+  { src: t66, w: 1600, h: 1100, alt: "Career — Trygve Studio" },
+  { src: t4, w: 1600, h: 1100, alt: "Contact page — Trygve Studio" },
 ];
 
 export default function TrygveCaseStudy() {
