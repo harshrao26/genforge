@@ -64,7 +64,7 @@ const Home = () => {
       {/* <MarqueeDemo /> */}
       <ClientMarquee />
       <GetInTouch />
-      <PricingSection ref={pricingRef} />
+      {/* <PricingSection ref={pricingRef} /> */}
       {/* <Projects /> */}
       <AboutSection />
       <HeroProjects />
