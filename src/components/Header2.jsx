@@ -61,7 +61,7 @@ export default function Navbar() {
           href="/"
           className="text-xl font-semibold text-black flex items-center gap-3"
         >
-          <Image src={logo} alt="GenForge Studio Logo" height={35} className="animate-in" />
+          <Image src={logo} alt="GenForge Studio Logo" height={40} className="animate-in" />
           <p>GenForge Studio</p>
         </Link>
 

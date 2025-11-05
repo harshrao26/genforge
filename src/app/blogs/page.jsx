@@ -96,7 +96,7 @@ const Page = () => {
   }, [blogs, selectedCategory, sortBy, submittedSearch, filterType]);
 
   return (
-    <div className="overflow-hi dden bg-white re lative">
+    <div className="overflow-hidden   bg-white re lative">
       <BlogHero
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
@@ -140,7 +140,7 @@ const Page = () => {
 // --------------------- Components ---------------------
 
 const BlogHero = ({ searchTerm, setSearchTerm, onSearch }) => (
-  <section className="relative flex justify-between w-full bg-gradient-to-br from-[#833DFA] via-[#] to-white text-zinc-800 overflow-hidden pt-16">
+  <section className="relative  flex justify-between w-full bg-gradient-to-br from-[#833DFA] via-[#] to-white text-zinc-800 overflow-hidden pt-16">
     <span className="md:text-[20vw] text-[25vw] main-p absolute -right-10">
       ⤶
     </span>
