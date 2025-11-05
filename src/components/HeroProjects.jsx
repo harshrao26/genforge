@@ -7,7 +7,9 @@ import Image from "next/image";
 import sparkCover from "@/assets/case-study/sns.png";
 import irvineCover from "@/assets/case-study/ih.png";
  import ts from "@/assets/case-study/try0.jpeg"
+ import tp from "@/assets/case-study/tp.png"
 
+import strucaxisHero from '@/assets/case-study/strucaxis-hero.png'
 const projects = [
   {
     slug: "spark-and-stitch",
@@ -25,6 +27,16 @@ const projects = [
     tags: ["Hospitality", "FF&E", "Admin Panel"],
     cover: irvineCover,
   },
+     {
+        slug: "trygve-pixel",
+        title: "Trygve Pixel — Global Web Design Agency",
+        summary:
+          "High-performance website for Trygve Pixel, a design and development agency delivering growth-focused, scalable digital experiences for startups and enterprises worldwide.",
+        meta: { location: "Lucknow, India / Global", year: "2025", role: "Design & Development" },
+        tags: ["Agency", "Next.js", "SEO", "Web Design"],
+        cover: tp, // Replace with Trygve Pixel cover image import
+        category: "Agency",
+      },
    {
       slug: "trygve-studio",
       title: "Trygve Studio — Architecture & Interior Design",
@@ -35,6 +47,18 @@ const projects = [
       cover: ts, // Replace with Trygve Studio cover image import
       category: "Architecture",
     },
+  
+     {
+    slug: "strucaxis",
+    title: "StrucAxis — Civil & Turnkey Construction",
+    summary:
+      "Professional portfolio website for civil engineering & turnkey construction firm. Built in 15 days with fast load times, scalable project grid, and lead-focused CTAs.",
+    meta: { location: "Lucknow, India", year: "2025", role: "Full‑stack" },
+    tags: ["Construction", "Civil Engineering", "Turnkey", "Performance"],
+    cover: strucaxisHero,
+    category: "Construction",
+  },
+  
   
 ];
 

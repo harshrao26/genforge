@@ -7,6 +7,8 @@ import ih from '@/assets/case-study/ih.png'
 import Image from "next/image";
 import ts from "@/assets/case-study/try0.jpeg"
 import tp from "@/assets/case-study/tp.png"
+import strucaxisHero from '@/assets/case-study/strucaxis-hero.png'
+
 
  
 const CASE_STUDIES = [
@@ -51,6 +53,16 @@ const CASE_STUDIES = [
     tags: ["Architecture", "Construction", "Interior Design"],
     cover: ts, // Replace with Trygve Studio cover image import
     category: "Architecture",
+  },
+   {
+    slug: "strucaxis",
+    title: "StrucAxis — Civil & Turnkey Construction",
+    summary:
+      "Professional portfolio website for civil engineering & turnkey construction firm. Built in 15 days with fast load times, scalable project grid, and lead-focused CTAs.",
+    meta: { location: "Lucknow, India", year: "2025", role: "Full‑stack" },
+    tags: ["Construction", "Civil Engineering", "Turnkey", "Performance"],
+    cover: strucaxisHero,
+    category: "Construction",
   },
 ];
 

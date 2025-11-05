@@ -23,6 +23,7 @@ import logo from "@/assets/logo.png";
 
 import WhyBusinessOwners from "@/components/WhyBusinessOwners";
 import TestimonialsMarquee from "@/components/TestimonialsMarquee";
+import TechStackMarquee from "@/components/TechStackMarquee";
 
 const Home = () => {
   const images = [{ src: logo, alt: "Image 1" }];
@@ -50,6 +51,8 @@ const Home = () => {
       />
 
       <WhyBusinessOwners />
+
+      <TechStackMarquee />
 
       {/* <CardCarousel
       className="bg-white"
